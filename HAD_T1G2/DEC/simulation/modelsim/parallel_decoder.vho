@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/13/2022 17:04:58"
+-- DATE "11/13/2022 19:43:36"
 
 -- 
 -- Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -143,10 +143,11 @@ SIGNAL \b2v_inst18|m_is_error~0_combout\ : std_logic;
 SIGNAL \valid_ALTERA_SYNTHESIZED~0_combout\ : std_logic;
 SIGNAL \b2v_inst5|m_is_one~0_combout\ : std_logic;
 SIGNAL \b2v_inst6|m_is_one~0_combout\ : std_logic;
-SIGNAL \m_ALTERA_SYNTHESIZED[2]~0_combout\ : std_logic;
+SIGNAL \m_ALTERA_SYNTHESIZED[2]~1_combout\ : std_logic;
 SIGNAL \b2v_inst15|hA01|and20|y~combout\ : std_logic;
 SIGNAL \b2v_inst15|fA10|fA0|and20|y~combout\ : std_logic;
 SIGNAL \b2v_inst18|m_is_one~0_combout\ : std_logic;
+SIGNAL \m_ALTERA_SYNTHESIZED[1]~0_combout\ : std_logic;
 SIGNAL \d[7]~0_combout\ : std_logic;
 SIGNAL \b2v_inst15|hA02|and20|y~combout\ : std_logic;
 SIGNAL \b2v_inst15|fA11|fA0|xor20|y~combout\ : std_logic;
@@ -156,7 +157,7 @@ SIGNAL \b2v_inst15|fA11|hA0|and20|y~combout\ : std_logic;
 SIGNAL \b2v_inst15|fA20|hA0|and20|y~combout\ : std_logic;
 SIGNAL \b2v_inst15|fA20|fA10|or20|y~0_combout\ : std_logic;
 SIGNAL \b2v_inst15|hA03|and20|y~combout\ : std_logic;
-SIGNAL \m_ALTERA_SYNTHESIZED~1_combout\ : std_logic;
+SIGNAL \m_ALTERA_SYNTHESIZED~2_combout\ : std_logic;
 SIGNAL \b2v_inst|z\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL m_ALTERA_SYNTHESIZED : std_logic_vector(3 DOWNTO 0);
 SIGNAL \ALT_INV_valid_ALTERA_SYNTHESIZED~0_combout\ : std_logic;
@@ -203,7 +204,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \m_ALTERA_SYNTHESIZED~1_combout\,
+	i => \m_ALTERA_SYNTHESIZED~2_combout\,
 	devoe => ww_devoe,
 	o => \m[0]~output_o\);
 
@@ -215,7 +216,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => m_ALTERA_SYNTHESIZED(1),
+	i => \m_ALTERA_SYNTHESIZED[1]~0_combout\,
 	devoe => ww_devoe,
 	o => \m[1]~output_o\);
 
@@ -227,7 +228,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \m_ALTERA_SYNTHESIZED[2]~0_combout\,
+	i => \m_ALTERA_SYNTHESIZED[2]~1_combout\,
 	devoe => ww_devoe,
 	o => \m[2]~output_o\);
 
@@ -635,9 +636,9 @@ PORT MAP (
 	combout => \b2v_inst6|m_is_one~0_combout\);
 
 -- Location: LCCOMB_X29_Y27_N28
-\m_ALTERA_SYNTHESIZED[2]~0\ : cycloneiv_lcell_comb
+\m_ALTERA_SYNTHESIZED[2]~1\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \m_ALTERA_SYNTHESIZED[2]~0_combout\ = (\b2v_inst6|m_is_one~0_combout\ & (\b2v_inst18|m_is_error~0_combout\ & (\b2v_inst6|m_is_error~0_combout\ & \b2v_inst5|m_is_error~0_combout\)))
+-- \m_ALTERA_SYNTHESIZED[2]~1_combout\ = (\b2v_inst6|m_is_one~0_combout\ & (\b2v_inst18|m_is_error~0_combout\ & (\b2v_inst6|m_is_error~0_combout\ & \b2v_inst5|m_is_error~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -649,12 +650,12 @@ PORT MAP (
 	datab => \b2v_inst18|m_is_error~0_combout\,
 	datac => \b2v_inst6|m_is_error~0_combout\,
 	datad => \b2v_inst5|m_is_error~0_combout\,
-	combout => \m_ALTERA_SYNTHESIZED[2]~0_combout\);
+	combout => \m_ALTERA_SYNTHESIZED[2]~1_combout\);
 
 -- Location: LCCOMB_X29_Y27_N22
 \b2v_inst15|hA01|and20|y\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \b2v_inst15|hA01|and20|y~combout\ = (\m_ALTERA_SYNTHESIZED[2]~0_combout\ & (!\y[5]~input_o\ & (\y[4]~input_o\ $ (!m_ALTERA_SYNTHESIZED(3))))) # (!\m_ALTERA_SYNTHESIZED[2]~0_combout\ & (\y[5]~input_o\ & (\y[4]~input_o\ $ (m_ALTERA_SYNTHESIZED(3)))))
+-- \b2v_inst15|hA01|and20|y~combout\ = (\m_ALTERA_SYNTHESIZED[2]~1_combout\ & (!\y[5]~input_o\ & (\y[4]~input_o\ $ (!m_ALTERA_SYNTHESIZED(3))))) # (!\m_ALTERA_SYNTHESIZED[2]~1_combout\ & (\y[5]~input_o\ & (\y[4]~input_o\ $ (m_ALTERA_SYNTHESIZED(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -663,7 +664,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \y[4]~input_o\,
-	datab => \m_ALTERA_SYNTHESIZED[2]~0_combout\,
+	datab => \m_ALTERA_SYNTHESIZED[2]~1_combout\,
 	datac => m_ALTERA_SYNTHESIZED(3),
 	datad => \y[5]~input_o\,
 	combout => \b2v_inst15|hA01|and20|y~combout\);
@@ -704,9 +705,9 @@ PORT MAP (
 	combout => \b2v_inst18|m_is_one~0_combout\);
 
 -- Location: LCCOMB_X29_Y27_N16
-\m_ALTERA_SYNTHESIZED[1]\ : cycloneiv_lcell_comb
+\m_ALTERA_SYNTHESIZED[1]~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- m_ALTERA_SYNTHESIZED(1) = (\b2v_inst5|m_is_error~0_combout\ & (\b2v_inst6|m_is_error~0_combout\ & (\b2v_inst18|m_is_one~0_combout\ & \b2v_inst18|m_is_error~0_combout\)))
+-- \m_ALTERA_SYNTHESIZED[1]~0_combout\ = (\b2v_inst5|m_is_error~0_combout\ & (\b2v_inst6|m_is_error~0_combout\ & (\b2v_inst18|m_is_one~0_combout\ & \b2v_inst18|m_is_error~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -718,12 +719,12 @@ PORT MAP (
 	datab => \b2v_inst6|m_is_error~0_combout\,
 	datac => \b2v_inst18|m_is_one~0_combout\,
 	datad => \b2v_inst18|m_is_error~0_combout\,
-	combout => m_ALTERA_SYNTHESIZED(1));
+	combout => \m_ALTERA_SYNTHESIZED[1]~0_combout\);
 
 -- Location: LCCOMB_X27_Y27_N16
 \d[7]~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \d[7]~0_combout\ = m_ALTERA_SYNTHESIZED(1) $ (\m_ALTERA_SYNTHESIZED[2]~0_combout\ $ (m_ALTERA_SYNTHESIZED(3) $ (\y[0]~input_o\)))
+-- \d[7]~0_combout\ = \m_ALTERA_SYNTHESIZED[1]~0_combout\ $ (\m_ALTERA_SYNTHESIZED[2]~1_combout\ $ (m_ALTERA_SYNTHESIZED(3) $ (\y[0]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -731,8 +732,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => m_ALTERA_SYNTHESIZED(1),
-	datab => \m_ALTERA_SYNTHESIZED[2]~0_combout\,
+	dataa => \m_ALTERA_SYNTHESIZED[1]~0_combout\,
+	datab => \m_ALTERA_SYNTHESIZED[2]~1_combout\,
 	datac => m_ALTERA_SYNTHESIZED(3),
 	datad => \y[0]~input_o\,
 	combout => \d[7]~0_combout\);
@@ -740,7 +741,7 @@ PORT MAP (
 -- Location: LCCOMB_X27_Y27_N2
 \b2v_inst15|hA02|and20|y\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \b2v_inst15|hA02|and20|y~combout\ = (m_ALTERA_SYNTHESIZED(1) & (!\y[3]~input_o\ & (m_ALTERA_SYNTHESIZED(3) $ (!\y[2]~input_o\)))) # (!m_ALTERA_SYNTHESIZED(1) & (\y[3]~input_o\ & (m_ALTERA_SYNTHESIZED(3) $ (\y[2]~input_o\))))
+-- \b2v_inst15|hA02|and20|y~combout\ = (\m_ALTERA_SYNTHESIZED[1]~0_combout\ & (!\y[3]~input_o\ & (m_ALTERA_SYNTHESIZED(3) $ (!\y[2]~input_o\)))) # (!\m_ALTERA_SYNTHESIZED[1]~0_combout\ & (\y[3]~input_o\ & (m_ALTERA_SYNTHESIZED(3) $ (\y[2]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -748,7 +749,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => m_ALTERA_SYNTHESIZED(1),
+	dataa => \m_ALTERA_SYNTHESIZED[1]~0_combout\,
 	datab => \y[3]~input_o\,
 	datac => m_ALTERA_SYNTHESIZED(3),
 	datad => \y[2]~input_o\,
@@ -757,7 +758,7 @@ PORT MAP (
 -- Location: LCCOMB_X30_Y27_N28
 \b2v_inst|z[1]\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \b2v_inst|z\(1) = m_ALTERA_SYNTHESIZED(1) $ (\m_ALTERA_SYNTHESIZED[2]~0_combout\)
+-- \b2v_inst|z\(1) = \m_ALTERA_SYNTHESIZED[1]~0_combout\ $ (\m_ALTERA_SYNTHESIZED[2]~1_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -765,8 +766,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => m_ALTERA_SYNTHESIZED(1),
-	datad => \m_ALTERA_SYNTHESIZED[2]~0_combout\,
+	datac => \m_ALTERA_SYNTHESIZED[1]~0_combout\,
+	datad => \m_ALTERA_SYNTHESIZED[2]~1_combout\,
 	combout => \b2v_inst|z\(1));
 
 -- Location: LCCOMB_X27_Y27_N10
@@ -890,9 +891,9 @@ PORT MAP (
 	combout => \b2v_inst15|hA03|and20|y~combout\);
 
 -- Location: LCCOMB_X27_Y27_N12
-\m_ALTERA_SYNTHESIZED~1\ : cycloneiv_lcell_comb
+\m_ALTERA_SYNTHESIZED~2\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \m_ALTERA_SYNTHESIZED~1_combout\ = \b2v_inst15|fA20|fA10|or20|y~0_combout\ $ (((\b2v_inst15|fA10|fA0|and20|y~combout\) # ((\b2v_inst15|hA03|and20|y~combout\ & \b2v_inst15|hA02|and20|y~combout\))))
+-- \m_ALTERA_SYNTHESIZED~2_combout\ = \b2v_inst15|fA20|fA10|or20|y~0_combout\ $ (((\b2v_inst15|fA10|fA0|and20|y~combout\) # ((\b2v_inst15|hA03|and20|y~combout\ & \b2v_inst15|hA02|and20|y~combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -904,7 +905,7 @@ PORT MAP (
 	datab => \b2v_inst15|fA20|fA10|or20|y~0_combout\,
 	datac => \b2v_inst15|hA03|and20|y~combout\,
 	datad => \b2v_inst15|hA02|and20|y~combout\,
-	combout => \m_ALTERA_SYNTHESIZED~1_combout\);
+	combout => \m_ALTERA_SYNTHESIZED~2_combout\);
 
 ww_valid <= \valid~output_o\;
 

@@ -63,12 +63,6 @@ PORT MAP(m1 => m_ALTERA_SYNTHESIZED(3),
 		 m3 => m_ALTERA_SYNTHESIZED(1),
 		 z => z);
 
-d(4) <= z(3) XOR y(3);
-d(3) <= z(4) XOR y(4);
-d(2) <= z(5) XOR y(5);
-d(1) <= z(6) XOR y(6);
-d(0) <= z(7) XOR y(7);
-
 b2v_inst15 : popcounter_8bitparallelopt
 PORT MAP(d => d,
 		 c => c);
@@ -114,13 +108,19 @@ PORT MAP(y0 => y(7),
 		 m_is_one => m2_is_one,
 		 m_is_error => m2_is_error);
 
-d(7) <= z(0) XOR y(0);
-d(6) <= z(1) XOR y(1);
-d(5) <= z(2) XOR y(2);
-
 m_ALTERA_SYNTHESIZED(3) <= m1_is_one AND valid_ALTERA_SYNTHESIZED;
 m_ALTERA_SYNTHESIZED(2) <= m2_is_one AND valid_ALTERA_SYNTHESIZED;
 m_ALTERA_SYNTHESIZED(1) <= valid_ALTERA_SYNTHESIZED AND m3_is_one;
+
+
+d(7) <= z(0) XOR y(0);
+d(6) <= z(1) XOR y(1);
+d(5) <= z(2) XOR y(2);
+d(4) <= z(3) XOR y(3);
+d(3) <= z(4) XOR y(4);
+d(2) <= z(5) XOR y(5);
+d(1) <= z(6) XOR y(6);
+d(0) <= z(7) XOR y(7);
 
 valid <= valid_ALTERA_SYNTHESIZED;
 m <= m_ALTERA_SYNTHESIZED;

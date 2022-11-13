@@ -1,5 +1,5 @@
 Analysis & Synthesis report for parallel_decoder
-Sun Nov 13 17:04:47 2022
+Sun Nov 13 19:43:25 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 13 17:04:47 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 13 19:43:25 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; parallel_decoder                            ;
 ; Top-level Entity Name              ; full_parallel_decoder                       ;
@@ -288,7 +288,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 13 17:04:36 2022
+    Info: Processing started: Sun Nov 13 19:43:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off parallel_decoder -c parallel_decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -324,7 +324,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file popCoun
     Info (12023): Found entity 1: popCounter_8bitParallelOpt File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 7
 Info (12127): Elaborating entity "full_parallel_decoder" for the top level hierarchy
 Info (12128): Elaborating entity "partial_encoder" for hierarchy "partial_encoder:b2v_inst" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 60
-Info (12128): Elaborating entity "popCounter_8bitParallelOpt" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 72
+Info (12128): Elaborating entity "popCounter_8bitParallelOpt" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 66
 Info (12128): Elaborating entity "halfAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA00" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 31
 Info (12128): Elaborating entity "gateXOr2" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA00|gateXOr2:xor20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 22
 Info (12128): Elaborating entity "gateAnd2" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA00|gateAnd2:and20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 23
@@ -333,7 +333,7 @@ Info (12128): Elaborating entity "fullAdderCLA_1bit" for hierarchy "popCounter_8
 Info (12128): Elaborating entity "fullAdderWoCI_3bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 39
 Info (12128): Elaborating entity "fullAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 135
 Info (12128): Elaborating entity "gateOr2" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 56
-Info (12128): Elaborating entity "m_bit_decoder" for hierarchy "m_bit_decoder:b2v_inst18" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 78
+Info (12128): Elaborating entity "m_bit_decoder" for hierarchy "m_bit_decoder:b2v_inst18" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 72
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -342,9 +342,9 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 480 megabytes
-    Info: Processing ended: Sun Nov 13 17:04:47 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Sun Nov 13 19:43:25 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:25
 
 

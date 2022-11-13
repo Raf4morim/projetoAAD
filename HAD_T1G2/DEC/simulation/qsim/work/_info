@@ -10,14 +10,14 @@ z2
 cModel Technology
 Z0 d/home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/simulation/qsim
 Efull_parallel_decoder
-Z1 w1668359008
+Z1 w1668364209
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 ]lnLY_M[kb3fWjbKaDc;_1
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z7 DPx9 cycloneiv 20 cycloneiv_components 0 22 J>QEYeEXjZb^Cnb3?e1D40
-!i122 128
+!i122 132
 R0
 Z8 8parallel_decoder.vho
 Z9 Fparallel_decoder.vho
@@ -27,9 +27,9 @@ VX]e55>MU;]CEmGX>18UTU3
 !s100 <anB4S^]3[Ee:O[VSk5X@2
 Z11 OV;C;2020.1;71
 32
-Z12 !s110 1668359009
+Z12 !s110 1668364210
 !i10b 1
-Z13 !s108 1668359009.000000
+Z13 !s108 1668364210.000000
 Z14 !s90 -work|work|parallel_decoder.vho|
 Z15 !s107 parallel_decoder.vho|
 !i113 1
@@ -43,11 +43,11 @@ R5
 R6
 R7
 DEx4 work 21 full_parallel_decoder 0 22 X]e55>MU;]CEmGX>18UTU3
-!i122 128
-l171
-L102 817
-VY_ZNK?=9?i8b:Tg8@?]lz1
-!s100 LUG@EbICO5JZF;WdhOaC91
+!i122 132
+l172
+L102 818
+V40OGG:iiodYf7Z<LJT4m<3
+!s100 PU<4Fn2a4MTTA3a4Dz8zW3
 R11
 32
 R12
@@ -59,10 +59,10 @@ R15
 R16
 R17
 Efull_parallel_decoder_vhd_vec_tst
-Z18 w1668359006
+Z18 w1668364208
 R5
 R6
-!i122 129
+!i122 133
 R0
 Z19 8full_sim.vwf.vht
 Z20 Ffull_sim.vwf.vht
@@ -84,7 +84,7 @@ Afull_parallel_decoder_arch
 R5
 R6
 Z24 DEx4 work 33 full_parallel_decoder_vhd_vec_tst 0 22 ;V3NOAgK4b[LB@0BbC0_D2
-!i122 129
+!i122 133
 l47
 Z25 L34 198
 Z26 ViU_fZ^a]B20oOWl_BAjOC3
@@ -107,7 +107,7 @@ R4
 R5
 R6
 R7
-!i122 128
+!i122 132
 R0
 R8
 R9
@@ -133,7 +133,7 @@ R5
 R6
 R7
 DEx4 work 10 hard_block 0 22 5mcF]JUg7TS^l0EMa_h4A1
-!i122 128
+!i122 132
 l65
 L51 20
 VMkbPfL8S?h^i>Mg3GSGD`1
