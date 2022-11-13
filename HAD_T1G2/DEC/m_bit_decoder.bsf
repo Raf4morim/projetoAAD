@@ -90,8 +90,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 128 48)
 		(output)
-		(text "m_is_valid" (rect 0 0 61 15)(font "Intel Clear" (font_size 8)))
-		(text "m_is_valid" (rect 46 43 107 58)(font "Intel Clear" (font_size 8)))
+		(text "m_is_error" (rect 0 0 62 15)(font "Intel Clear" (font_size 8)))
+		(text "m_is_error" (rect 45 43 107 58)(font "Intel Clear" (font_size 8)))
 		(line (pt 128 48)(pt 112 48))
 	)
 	(drawing

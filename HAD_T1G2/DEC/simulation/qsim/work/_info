@@ -1,0 +1,330 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/simulation/qsim
+Efull_parallel_decoder
+Z1 w1668350031
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 ]lnLY_M[kb3fWjbKaDc;_1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx9 cycloneiv 20 cycloneiv_components 0 22 J>QEYeEXjZb^Cnb3?e1D40
+!i122 110
+R0
+Z8 8parallel_decoder.vho
+Z9 Fparallel_decoder.vho
+l0
+Z10 L78 1
+VTd8YZX86jRE@]4CB_7oD72
+!s100 V_gMVJ4K:k1khRgYHj^NR1
+Z11 OV;C;2020.1;71
+32
+Z12 !s110 1668350033
+!i10b 1
+Z13 !s108 1668350032.000000
+Z14 !s90 -work|work|parallel_decoder.vho|
+Z15 !s107 parallel_decoder.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 21 full_parallel_decoder 0 22 Td8YZX86jRE@]4CB_7oD72
+!i122 110
+l173
+L102 854
+V_5ZV=FVacW>G?`f?XfjRF3
+!s100 g;DAj<iOdJ7OkPOj`ZZJ03
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Efull_parallel_decoder_vhd_vec_tst
+Z18 w1668350030
+R5
+R6
+!i122 111
+R0
+Z19 8full_sim.vwf.vht
+Z20 Ffull_sim.vwf.vht
+l0
+Z21 L32 1
+V;V3NOAgK4b[LB@0BbC0_D2
+!s100 h3]12J7FXDieOC^F6cBN?3
+R11
+32
+R12
+!i10b 1
+Z22 !s108 1668350033.000000
+Z23 !s90 -work|work|full_sim.vwf.vht|
+Z24 !s107 full_sim.vwf.vht|
+!i113 1
+R16
+R17
+Afull_parallel_decoder_arch
+R5
+R6
+Z25 DEx4 work 33 full_parallel_decoder_vhd_vec_tst 0 22 ;V3NOAgK4b[LB@0BbC0_D2
+!i122 111
+l47
+Z26 L34 198
+Z27 ViU_fZ^a]B20oOWl_BAjOC3
+Z28 !s100 NI;XcO@NhLm;Y]eGLdZl>0
+R11
+32
+R12
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R16
+R17
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 110
+R0
+R8
+R9
+l0
+L35 1
+V5mcF]JUg7TS^l0EMa_h4A1
+!s100 Q?IbEnM>aW3cc=hi`GCc71
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 5mcF]JUg7TS^l0EMa_h4A1
+!i122 110
+l65
+L51 20
+VMkbPfL8S?h^i>Mg3GSGD`1
+!s100 O>:lWQfHCcIaXgQ<=Tgn10
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Em_bit_decoder
+Z29 w1668345888
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 74
+R0
+R8
+R9
+l0
+R10
+VVJ3E8XEDiTdkG`h2Wi5lN2
+!s100 O[H>Vc^O9]7o0jhT`2;mh3
+R11
+32
+Z30 !s110 1668345890
+!i10b 1
+Z31 !s108 1668345890.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 13 m_bit_decoder 0 22 VJ3E8XEDiTdkG`h2Wi5lN2
+!i122 74
+l151
+L106 285
+V1RK_PT5V6eL?XhVUR7oB43
+!s100 Kl2AOI3HXh>:CCSkUji7z2
+R11
+32
+R30
+!i10b 1
+R31
+R14
+R15
+!i113 1
+R16
+R17
+Em_bit_decoder_vhd_vec_tst
+Z32 w1668345887
+R5
+R6
+!i122 75
+R0
+Z33 8m_bit_decoder_sim.vwf.vht
+Z34 Fm_bit_decoder_sim.vwf.vht
+l0
+R21
+Vdo9MAIYPQ=6IJE9l_CX_G0
+!s100 o?W6G9aJg[nGM=<MT5g??2
+R11
+32
+R30
+!i10b 1
+R31
+Z35 !s90 -work|work|m_bit_decoder_sim.vwf.vht|
+Z36 !s107 m_bit_decoder_sim.vwf.vht|
+!i113 1
+R16
+R17
+Am_bit_decoder_arch
+R5
+R6
+DEx4 work 25 m_bit_decoder_vhd_vec_tst 0 22 do9MAIYPQ=6IJE9l_CX_G0
+!i122 75
+l61
+L34 99
+V=TPmcT@Emc]cJz^f>V7@`1
+!s100 Lg7>?U6YD@9E]_OR@b]0o2
+R11
+32
+R30
+!i10b 1
+R31
+R35
+R36
+!i113 1
+R16
+R17
+Epopcounter_8bitparallelopt
+Z37 w1668338631
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 18
+R0
+R8
+R9
+l0
+R10
+V]UU>6ei_L1a7ei`2lfX741
+!s100 8m4TobzIR532>Vc>Pma032
+R11
+32
+Z38 !s110 1668338632
+!i10b 1
+Z39 !s108 1668338632.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 26 popcounter_8bitparallelopt 0 22 ]UU>6ei_L1a7ei`2lfX741
+!i122 18
+l145
+L100 418
+V9>FE44Kc>GfXKckg4bRD@1
+!s100 <dbah<HfV_jT=Zc^TZJ012
+R11
+32
+R38
+!i10b 1
+R39
+R14
+R15
+!i113 1
+R16
+R17
+Epopcounter_8bitparallelopt_vhd_vec_tst
+R37
+R5
+R6
+!i122 19
+R0
+Z40 8pop_counter_sim.vwf.vht
+Z41 Fpop_counter_sim.vwf.vht
+l0
+R21
+V^o[4QIPATjeA_nmKg^ULj3
+!s100 QSe_K5JPjK6J<1n?TJbV;0
+R11
+32
+R38
+!i10b 1
+R39
+Z42 !s90 -work|work|pop_counter_sim.vwf.vht|
+Z43 !s107 pop_counter_sim.vwf.vht|
+!i113 1
+R16
+R17
+Apopcounter_8bitparallelopt_arch
+R5
+R6
+DEx4 work 38 popcounter_8bitparallelopt_vhd_vec_tst 0 22 ^o[4QIPATjeA_nmKg^ULj3
+!i122 19
+l45
+L34 67
+V4Ykm`z>^MD`3AUj60kLQL0
+!s100 QKS4G`:QL:=MLcUKLlL;Q3
+R11
+32
+R38
+!i10b 1
+R39
+R42
+R43
+!i113 1
+R16
+R17
