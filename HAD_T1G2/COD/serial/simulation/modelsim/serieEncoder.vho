@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/12/2022 20:29:25"
+-- DATE "11/13/2022 13:57:07"
 
 -- 
 -- Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -82,8 +82,8 @@ ENTITY 	serial_encoder IS
 	nGRst : IN std_logic;
 	clk : IN std_logic;
 	mIn : IN std_logic;
-	code : BUFFER std_logic_vector(7 DOWNTO 0);
-	v : BUFFER std_logic
+	code : OUT std_logic_vector(7 DOWNTO 0);
+	v : OUT std_logic
 	);
 END serial_encoder;
 
@@ -135,7 +135,7 @@ SIGNAL \nGRst~input_o\ : std_logic;
 SIGNAL \con|nad2|y~0_combout\ : std_logic;
 SIGNAL \con|nad2|y~1_combout\ : std_logic;
 SIGNAL \bc|ff0|Q~q\ : std_logic;
-SIGNAL \con|cMem|prog~0_combout\ : std_logic;
+SIGNAL \con|CountMem|prog~0_combout\ : std_logic;
 SIGNAL \bc|ff1|Q~q\ : std_logic;
 SIGNAL \bc|ff2|Q~0_combout\ : std_logic;
 SIGNAL \bc|ff2|Q~q\ : std_logic;
@@ -440,9 +440,9 @@ PORT MAP (
 	q => \bc|ff0|Q~q\);
 
 -- Location: LCCOMB_X13_Y3_N22
-\con|cMem|prog~0\ : cycloneiv_lcell_comb
+\con|CountMem|prog~0\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \con|cMem|prog~0_combout\ = \bc|ff1|Q~q\ $ (\bc|ff0|Q~q\)
+-- \con|CountMem|prog~0_combout\ = \bc|ff1|Q~q\ $ (\bc|ff0|Q~q\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -452,7 +452,7 @@ GENERIC MAP (
 PORT MAP (
 	datab => \bc|ff1|Q~q\,
 	datac => \bc|ff0|Q~q\,
-	combout => \con|cMem|prog~0_combout\);
+	combout => \con|CountMem|prog~0_combout\);
 
 -- Location: FF_X15_Y3_N29
 \bc|ff1|Q\ : dffeas
@@ -463,7 +463,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \clk~input_o\,
-	asdata => \con|cMem|prog~0_combout\,
+	asdata => \con|CountMem|prog~0_combout\,
 	clrn => \con|nad2|ALT_INV_y~1_combout\,
 	sload => VCC,
 	devclrn => ww_devclrn,
@@ -865,7 +865,7 @@ PORT MAP (
 -- Location: LCCOMB_X13_Y3_N8
 \xor8|bit3|y\ : cycloneiv_lcell_comb
 -- Equation(s):
--- \xor8|bit3|y~combout\ = \pr8|ff3|Q~q\ $ (((\con|cMem|prog~0_combout\ & (\ff|Q~q\ & !\bc|ff2|Q~q\))))
+-- \xor8|bit3|y~combout\ = \pr8|ff3|Q~q\ $ (((\con|CountMem|prog~0_combout\ & (\ff|Q~q\ & !\bc|ff2|Q~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -873,7 +873,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \con|cMem|prog~0_combout\,
+	dataa => \con|CountMem|prog~0_combout\,
 	datab => \pr8|ff3|Q~q\,
 	datac => \ff|Q~q\,
 	datad => \bc|ff2|Q~q\,
