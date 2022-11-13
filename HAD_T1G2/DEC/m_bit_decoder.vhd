@@ -1,22 +1,3 @@
--- Copyright (C) 2020  Intel Corporation. All rights reserved.
--- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and any partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details, at
--- https://fpgasoftware.intel.com/eula.
-
--- PROGRAM		"Quartus Prime"
--- VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
--- CREATED		"Sun Nov 13 10:33:15 2022"
-
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
 
@@ -34,132 +15,59 @@ ENTITY m_bit_decoder IS
 		y6 :  IN  STD_LOGIC;
 		y7 :  IN  STD_LOGIC;
 		m_is_one :  OUT  STD_LOGIC;
-		m_is_valid :  OUT  STD_LOGIC
+		m_is_error :  OUT  STD_LOGIC
 	);
 END m_bit_decoder;
 
 ARCHITECTURE bdf_type OF m_bit_decoder IS 
 
-SIGNAL	SYNTHESIZED_WIRE_34 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_35 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_36 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_37 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_38 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_39 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_7 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_8 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_9 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_10 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_11 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_12 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_13 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_14 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_15 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_18 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_19 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_40 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_41 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_22 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_23 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_24 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_25 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_28 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_29 :  STD_LOGIC;
+SIGNAL	c0 :  STD_LOGIC;
+SIGNAL	c1 :  STD_LOGIC;
+SIGNAL	c1_c0_sum_c3c2 :  STD_LOGIC;
+SIGNAL	c2 :  STD_LOGIC;
+SIGNAL	c3 :  STD_LOGIC;
+SIGNAL	c3_c2_sum_c0c1 :  STD_LOGIC;
+SIGNAL	is_error :  STD_LOGIC;
+SIGNAL	is_one :  STD_LOGIC;
+SIGNAL	is_zero :  STD_LOGIC;
+SIGNAL	nc0 :  STD_LOGIC;
+SIGNAL	nc1 :  STD_LOGIC;
+SIGNAL	nc1_nc0_sum_nc3nc2 :  STD_LOGIC;
+SIGNAL	nc2 :  STD_LOGIC;
+SIGNAL	nc3 :  STD_LOGIC;
+SIGNAL	nc3_nc2_sum_nc0nc1 :  STD_LOGIC;
+SIGNAL	sum_c0c1 :  STD_LOGIC;
+SIGNAL	sum_c3c2 :  STD_LOGIC;
+SIGNAL	sum_nc0nc1 :  STD_LOGIC;
+SIGNAL	sum_nc3nc2 :  STD_LOGIC;
 
 
 BEGIN 
-m_is_one <= SYNTHESIZED_WIRE_24;
 
-
-
-SYNTHESIZED_WIRE_29 <= SYNTHESIZED_WIRE_34 OR SYNTHESIZED_WIRE_35;
-
-
-SYNTHESIZED_WIRE_28 <= SYNTHESIZED_WIRE_36 OR SYNTHESIZED_WIRE_37;
-
-
-SYNTHESIZED_WIRE_19 <= SYNTHESIZED_WIRE_38 OR SYNTHESIZED_WIRE_39;
-
-
-SYNTHESIZED_WIRE_25 <= SYNTHESIZED_WIRE_6 OR SYNTHESIZED_WIRE_7;
-
-
-SYNTHESIZED_WIRE_39 <= SYNTHESIZED_WIRE_8 XOR SYNTHESIZED_WIRE_9;
-
-
-SYNTHESIZED_WIRE_38 <= SYNTHESIZED_WIRE_10 XOR SYNTHESIZED_WIRE_11;
-
-
-SYNTHESIZED_WIRE_41 <= SYNTHESIZED_WIRE_12 XOR SYNTHESIZED_WIRE_13;
-
-
-SYNTHESIZED_WIRE_40 <= SYNTHESIZED_WIRE_14 XOR SYNTHESIZED_WIRE_15;
-
-
-SYNTHESIZED_WIRE_6 <= SYNTHESIZED_WIRE_39 AND SYNTHESIZED_WIRE_38 AND SYNTHESIZED_WIRE_18;
-
-
-SYNTHESIZED_WIRE_7 <= SYNTHESIZED_WIRE_19 AND SYNTHESIZED_WIRE_40 AND SYNTHESIZED_WIRE_41;
-
-
-SYNTHESIZED_WIRE_8 <= NOT(y0);
-
-
-
-SYNTHESIZED_WIRE_9 <= NOT(y1);
-
-
-
-SYNTHESIZED_WIRE_24 <= SYNTHESIZED_WIRE_22 OR SYNTHESIZED_WIRE_23;
-
-
-SYNTHESIZED_WIRE_10 <= NOT(y2);
-
-
-
-SYNTHESIZED_WIRE_11 <= NOT(y3);
-
-
-
-SYNTHESIZED_WIRE_12 <= NOT(y4);
-
-
-
-SYNTHESIZED_WIRE_13 <= NOT(y5);
-
-
-
-SYNTHESIZED_WIRE_14 <= NOT(y6);
-
-
-
-SYNTHESIZED_WIRE_15 <= NOT(y7);
-
-
-
-m_is_valid <= SYNTHESIZED_WIRE_24 XOR SYNTHESIZED_WIRE_25;
-
-
-SYNTHESIZED_WIRE_35 <= y0 XOR y1;
-
-
-SYNTHESIZED_WIRE_34 <= y2 XOR y3;
-
-
-SYNTHESIZED_WIRE_37 <= y4 XOR y5;
-
-
-SYNTHESIZED_WIRE_36 <= y6 XOR y7;
-
-
-SYNTHESIZED_WIRE_22 <= SYNTHESIZED_WIRE_35 AND SYNTHESIZED_WIRE_34 AND SYNTHESIZED_WIRE_28;
-
-
-SYNTHESIZED_WIRE_23 <= SYNTHESIZED_WIRE_29 AND SYNTHESIZED_WIRE_36 AND SYNTHESIZED_WIRE_37;
-
-
-SYNTHESIZED_WIRE_18 <= SYNTHESIZED_WIRE_40 OR SYNTHESIZED_WIRE_41;
-
+c0 <= y0 XOR y1;
+c1 <= y2 XOR y3;
+c2 <= y4 XOR y5;
+c3 <= y6 XOR y7;
+
+nc0 <= NOT(c0);
+nc1 <= NOT(c1);
+nc2 <= NOT(c2);
+nc3 <= NOT(c3);
+
+sum_c0c1 <= c1 OR c0;
+sum_c3c2 <= c3 OR c2;
+sum_nc0nc1 <= nc1 OR nc0;
+sum_nc3nc2 <= nc3 OR nc2;
+
+c1_c0_sum_c3c2 <= c0 AND c1 AND sum_c3c2;
+c3_c2_sum_c0c1 <= sum_c0c1 AND c3 AND c2;
+nc1_nc0_sum_nc3nc2 <= nc0 AND nc1 AND sum_nc3nc2;
+nc3_nc2_sum_nc0nc1 <= sum_nc0nc1 AND nc3 AND nc2;
+
+is_one <= c1_c0_sum_c3c2 OR c3_c2_sum_c0c1;
+is_zero <= nc1_nc0_sum_nc3nc2 OR nc3_nc2_sum_nc0nc1;
+
+m_is_one <= is_one;
+m_is_error <= NOT(is_zero OR is_one);
 
 END bdf_type;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for parallel_decoder
-Sun Nov 13 13:39:42 2022
+Sun Nov 13 17:04:47 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "popCounter_8bitParallelOpt:b2v_inst15"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 13 13:39:42 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 13 17:04:47 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; parallel_decoder                            ;
 ; Top-level Entity Name              ; full_parallel_decoder                       ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 36                                          ;
-;     Total combinational functions  ; 36                                          ;
+; Total logic elements               ; 35                                          ;
+;     Total combinational functions  ; 35                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 13                                          ;
@@ -165,63 +166,68 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
-; m_bit_decoder.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/m_bit_decoder.bdf              ;         ;
-; full_parallel_decoder.bdf        ; yes             ; User Block Diagram/Schematic File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.bdf      ;         ;
-; arithmetic.vhd                   ; yes             ; User VHDL File                     ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd                 ;         ;
-; simpleLogic.vhd                  ; yes             ; User VHDL File                     ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/simpleLogic.vhd                ;         ;
-; popCounter_8bitParallelOpt.vhd   ; yes             ; User VHDL File                     ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd ;         ;
-; partial_encoder.vhd              ; yes             ; User VHDL File                     ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/partial_encoder.vhd            ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; full_parallel_decoder.vhd        ; yes             ; User VHDL File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd      ;         ;
+; m_bit_decoder.vhd                ; yes             ; User VHDL File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/m_bit_decoder.vhd              ;         ;
+; partial_encoder.vhd              ; yes             ; User VHDL File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/partial_encoder.vhd            ;         ;
+; arithmetic.vhd                   ; yes             ; User VHDL File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd                 ;         ;
+; simpleLogic.vhd                  ; yes             ; User VHDL File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/simpleLogic.vhd                ;         ;
+; popCounter_8bitParallelOpt.vhd   ; yes             ; User VHDL File  ; /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 13               ;
-;                          ;                  ;
-; DSP block 9-bit elements ; 0                ;
-;                          ;                  ;
-; Maximum fan-out node     ; y[1]~input       ;
-; Maximum fan-out          ; 9                ;
-; Total fan-out            ; 154              ;
-; Average fan-out          ; 2.48             ;
-+--------------------------+------------------+
++----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary        ;
++--------------------------+-------------------------+
+; Resource                 ; Usage                   ;
++--------------------------+-------------------------+
+; I/O pins                 ; 13                      ;
+;                          ;                         ;
+; DSP block 9-bit elements ; 0                       ;
+;                          ;                         ;
+; Maximum fan-out node     ; m_ALTERA_SYNTHESIZED[3] ;
+; Maximum fan-out          ; 8                       ;
+; Total fan-out            ; 129                     ;
+; Average fan-out          ; 2.11                    ;
++--------------------------+-------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name                ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
-; |full_parallel_decoder                 ; 36 (7)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 13   ; 0            ; |full_parallel_decoder                                                                                                ; full_parallel_decoder      ; work         ;
-;    |m_bit_decoder:inst19|              ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|m_bit_decoder:inst19                                                                           ; m_bit_decoder              ; work         ;
-;    |m_bit_decoder:inst20|              ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|m_bit_decoder:inst20                                                                           ; m_bit_decoder              ; work         ;
-;    |m_bit_decoder:inst21|              ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|m_bit_decoder:inst21                                                                           ; m_bit_decoder              ; work         ;
-;    |popCounter_8bitParallelOpt:inst15| ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15                                                              ; popCounter_8bitParallelOpt ; work         ;
-;       |fullAdderWoCI_2bit:fA10|        ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA10                                      ; fullAdderWoCI_2bit         ; work         ;
-;          |fullAdderCLA_1bit:fA0|       ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0                ; fullAdderCLA_1bit          ; work         ;
-;             |gateAnd2:and20|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0|gateAnd2:and20 ; gateAnd2                   ; work         ;
-;             |gateXOr2:xor21|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0|gateXOr2:xor21 ; gateXOr2                   ; work         ;
-;       |fullAdderWoCI_2bit:fA11|        ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA11                                      ; fullAdderWoCI_2bit         ; work         ;
-;          |fullAdderCLA_1bit:fA0|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA11|fullAdderCLA_1bit:fA0                ; fullAdderCLA_1bit          ; work         ;
-;             |gateAnd2:and20|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA11|fullAdderCLA_1bit:fA0|gateAnd2:and20 ; gateAnd2                   ; work         ;
-;          |halfAdder_1bit:hA0|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA11|halfAdder_1bit:hA0                   ; halfAdder_1bit             ; work         ;
-;             |gateAnd2:and20|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA11|halfAdder_1bit:hA0|gateAnd2:and20    ; gateAnd2                   ; work         ;
-;       |fullAdderWoCI_3bit:fA20|        ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20                                      ; fullAdderWoCI_3bit         ; work         ;
-;          |fullAdder_1bit:fA10|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10                  ; fullAdder_1bit             ; work         ;
-;             |gateOr2:or20|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20     ; gateOr2                    ; work         ;
-;          |halfAdder_1bit:hA0|          ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20|halfAdder_1bit:hA0                   ; halfAdder_1bit             ; work         ;
-;             |gateAnd2:and20|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20|halfAdder_1bit:hA0|gateAnd2:and20    ; gateAnd2                   ; work         ;
-;       |halfAdder_1bit:hA02|            ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|halfAdder_1bit:hA02                                          ; halfAdder_1bit             ; work         ;
-;          |gateAnd2:and20|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:inst15|halfAdder_1bit:hA02|gateAnd2:and20                           ; gateAnd2                   ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
++--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Entity Name                ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
+; |full_parallel_decoder                     ; 35 (6)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 13   ; 0            ; |full_parallel_decoder                                                                                                    ; full_parallel_decoder      ; work         ;
+;    |m_bit_decoder:b2v_inst18|              ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|m_bit_decoder:b2v_inst18                                                                           ; m_bit_decoder              ; work         ;
+;    |m_bit_decoder:b2v_inst5|               ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|m_bit_decoder:b2v_inst5                                                                            ; m_bit_decoder              ; work         ;
+;    |m_bit_decoder:b2v_inst6|               ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|m_bit_decoder:b2v_inst6                                                                            ; m_bit_decoder              ; work         ;
+;    |partial_encoder:b2v_inst|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|partial_encoder:b2v_inst                                                                           ; partial_encoder            ; work         ;
+;    |popCounter_8bitParallelOpt:b2v_inst15| ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15                                                              ; popCounter_8bitParallelOpt ; work         ;
+;       |fullAdderWoCI_2bit:fA10|            ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA10                                      ; fullAdderWoCI_2bit         ; work         ;
+;          |fullAdderCLA_1bit:fA0|           ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0                ; fullAdderCLA_1bit          ; work         ;
+;             |gateAnd2:and20|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0|gateAnd2:and20 ; gateAnd2                   ; work         ;
+;             |gateXOr2:xor21|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0|gateXOr2:xor21 ; gateXOr2                   ; work         ;
+;       |fullAdderWoCI_2bit:fA11|            ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA11                                      ; fullAdderWoCI_2bit         ; work         ;
+;          |fullAdderCLA_1bit:fA0|           ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA11|fullAdderCLA_1bit:fA0                ; fullAdderCLA_1bit          ; work         ;
+;             |gateXOr2:xor20|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA11|fullAdderCLA_1bit:fA0|gateXOr2:xor20 ; gateXOr2                   ; work         ;
+;          |halfAdder_1bit:hA0|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA11|halfAdder_1bit:hA0                   ; halfAdder_1bit             ; work         ;
+;             |gateAnd2:and20|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA11|halfAdder_1bit:hA0|gateAnd2:and20    ; gateAnd2                   ; work         ;
+;       |fullAdderWoCI_3bit:fA20|            ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20                                      ; fullAdderWoCI_3bit         ; work         ;
+;          |fullAdder_1bit:fA10|             ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10                  ; fullAdder_1bit             ; work         ;
+;             |gateOr2:or20|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20     ; gateOr2                    ; work         ;
+;          |halfAdder_1bit:hA0|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|halfAdder_1bit:hA0                   ; halfAdder_1bit             ; work         ;
+;             |gateAnd2:and20|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|halfAdder_1bit:hA0|gateAnd2:and20    ; gateAnd2                   ; work         ;
+;       |halfAdder_1bit:hA01|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA01                                          ; halfAdder_1bit             ; work         ;
+;          |gateAnd2:and20|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA01|gateAnd2:and20                           ; gateAnd2                   ; work         ;
+;       |halfAdder_1bit:hA02|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA02                                          ; halfAdder_1bit             ; work         ;
+;          |gateAnd2:and20|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA02|gateAnd2:and20                           ; gateAnd2                   ; work         ;
+;       |halfAdder_1bit:hA03|                ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA03                                          ; halfAdder_1bit             ; work         ;
+;          |gateAnd2:and20|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |full_parallel_decoder|popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA03|gateAnd2:and20                           ; gateAnd2                   ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -240,21 +246,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "popCounter_8bitParallelOpt:b2v_inst15"                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; c[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_lcell_comb ; 37                          ;
-;     normal            ; 37                          ;
+; cycloneiii_lcell_comb ; 36                          ;
+;     normal            ; 36                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 30                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 7.42                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 6.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -273,16 +288,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 13 13:39:34 2022
+    Info: Processing started: Sun Nov 13 17:04:36 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off parallel_decoder -c parallel_decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file parallel_decoder.vhd
-    Info (12023): Found entity 1: parallel_decoder File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/parallel_decoder.vhd Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file m_bit_decoder.bdf
-    Info (12023): Found entity 1: m_bit_decoder
-Info (12021): Found 1 design units, including 1 entities, in source file full_parallel_decoder.bdf
-    Info (12023): Found entity 1: full_parallel_decoder
+Info (12021): Found 2 design units, including 1 entities, in source file full_parallel_decoder.vhd
+    Info (12022): Found design unit 1: full_parallel_decoder-bdf_type File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 15
+    Info (12023): Found entity 1: full_parallel_decoder File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file m_bit_decoder.vhd
+    Info (12022): Found design unit 1: m_bit_decoder-bdf_type File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/m_bit_decoder.vhd Line: 22
+    Info (12023): Found entity 1: m_bit_decoder File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/m_bit_decoder.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file partial_encoder.vhd
+    Info (12022): Found design unit 1: partial_encoder-structure File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/partial_encoder.vhd Line: 9
+    Info (12023): Found entity 1: partial_encoder File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/partial_encoder.vhd Line: 4
 Info (12021): Found 10 design units, including 5 entities, in source file arithmetic.vhd
     Info (12022): Found design unit 1: halfAdder_1bit-structure File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 12
     Info (12022): Found design unit 2: fullAdder_1bit-structure File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 37
@@ -304,32 +322,29 @@ Info (12021): Found 6 design units, including 3 entities, in source file simpleL
 Info (12021): Found 2 design units, including 1 entities, in source file popCounter_8bitParallelOpt.vhd
     Info (12022): Found design unit 1: popCounter_8bitParallelOpt-structure File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 12
     Info (12023): Found entity 1: popCounter_8bitParallelOpt File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file partial_encoder.vhd
-    Info (12022): Found design unit 1: partial_encoder-structure File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/partial_encoder.vhd Line: 9
-    Info (12023): Found entity 1: partial_encoder File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/partial_encoder.vhd Line: 4
 Info (12127): Elaborating entity "full_parallel_decoder" for the top level hierarchy
-Info (12128): Elaborating entity "m_bit_decoder" for hierarchy "m_bit_decoder:inst19"
-Info (12128): Elaborating entity "popCounter_8bitParallelOpt" for hierarchy "popCounter_8bitParallelOpt:inst15"
-Info (12128): Elaborating entity "halfAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:inst15|halfAdder_1bit:hA00" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 31
-Info (12128): Elaborating entity "gateXOr2" for hierarchy "popCounter_8bitParallelOpt:inst15|halfAdder_1bit:hA00|gateXOr2:xor20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 22
-Info (12128): Elaborating entity "gateAnd2" for hierarchy "popCounter_8bitParallelOpt:inst15|halfAdder_1bit:hA00|gateAnd2:and20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 23
-Info (12128): Elaborating entity "fullAdderWoCI_2bit" for hierarchy "popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA10" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 36
-Info (12128): Elaborating entity "fullAdderCLA_1bit" for hierarchy "popCounter_8bitParallelOpt:inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 107
-Info (12128): Elaborating entity "fullAdderWoCI_3bit" for hierarchy "popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 39
-Info (12128): Elaborating entity "fullAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 135
-Info (12128): Elaborating entity "gateOr2" for hierarchy "popCounter_8bitParallelOpt:inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 56
-Info (12128): Elaborating entity "partial_encoder" for hierarchy "partial_encoder:inst"
+Info (12128): Elaborating entity "partial_encoder" for hierarchy "partial_encoder:b2v_inst" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 60
+Info (12128): Elaborating entity "popCounter_8bitParallelOpt" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 72
+Info (12128): Elaborating entity "halfAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA00" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 31
+Info (12128): Elaborating entity "gateXOr2" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA00|gateXOr2:xor20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 22
+Info (12128): Elaborating entity "gateAnd2" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|halfAdder_1bit:hA00|gateAnd2:and20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 23
+Info (12128): Elaborating entity "fullAdderWoCI_2bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA10" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 36
+Info (12128): Elaborating entity "fullAdderCLA_1bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_2bit:fA10|fullAdderCLA_1bit:fA0" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 107
+Info (12128): Elaborating entity "fullAdderWoCI_3bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/popCounter_8bitParallelOpt.vhd Line: 39
+Info (12128): Elaborating entity "fullAdder_1bit" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 135
+Info (12128): Elaborating entity "gateOr2" for hierarchy "popCounter_8bitParallelOpt:b2v_inst15|fullAdderWoCI_3bit:fA20|fullAdder_1bit:fA10|gateOr2:or20" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/arithmetic.vhd Line: 56
+Info (12128): Elaborating entity "m_bit_decoder" for hierarchy "m_bit_decoder:b2v_inst18" File: /home/victms/Desktop/uni/AAD/proj1/projetoAAD/HAD_T1G2/DEC/full_parallel_decoder.vhd Line: 78
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 36 logic cells
+    Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Sun Nov 13 13:39:42 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 480 megabytes
+    Info: Processing ended: Sun Nov 13 17:04:47 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
 
 

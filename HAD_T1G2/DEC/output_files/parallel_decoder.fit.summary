@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Nov 13 13:39:47 2022
+Fitter Status : Successful - Sun Nov 13 17:04:52 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : parallel_decoder
 Top-level Entity Name : full_parallel_decoder
 Family : Cyclone IV GX
 Device : EP4CGX15BF14C6
 Timing Models : Final
-Total logic elements : 36 / 14,400 ( < 1 % )
-    Total combinational functions : 36 / 14,400 ( < 1 % )
+Total logic elements : 35 / 14,400 ( < 1 % )
+    Total combinational functions : 35 / 14,400 ( < 1 % )
     Dedicated logic registers : 0 / 14,400 ( 0 % )
 Total registers : 0
 Total pins : 13 / 81 ( 16 % )

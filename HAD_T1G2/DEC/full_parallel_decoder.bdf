@@ -545,9 +545,45 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
+	(rect 968 416 1104 528)
+	(text "partial_encoder" (rect 5 0 82 11)(font "Arial" ))
+	(text "inst" (rect 8 96 26 107)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "m1" (rect 0 0 16 11)(font "Arial" ))
+		(text "m1" (rect 21 27 37 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "m2" (rect 0 0 16 11)(font "Arial" ))
+		(text "m2" (rect 21 43 37 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "m3" (rect 0 0 16 11)(font "Arial" ))
+		(text "m3" (rect 21 59 37 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "z[7..0]" (rect 0 0 30 11)(font "Arial" ))
+		(text "z[7..0]" (rect 90 27 120 38)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 96))
+	)
+)
+(symbol
 	(rect 256 16 384 208)
 	(text "m_bit_decoder" (rect 5 0 92 15)(font "Intel Clear" (font_size 8)))
-	(text "inst19" (rect 8 175 39 188)(font "Intel Clear" ))
+	(text "inst5" (rect 8 175 32 188)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -625,7 +661,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 256 224 384 416)
 	(text "m_bit_decoder" (rect 5 0 92 15)(font "Intel Clear" (font_size 8)))
-	(text "inst20" (rect 8 175 41 188)(font "Intel Clear" ))
+	(text "inst6" (rect 8 175 33 188)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -703,7 +739,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 256 432 384 624)
 	(text "m_bit_decoder" (rect 5 0 92 15)(font "Intel Clear" (font_size 8)))
-	(text "inst21" (rect 8 175 39 188)(font "Intel Clear" ))
+	(text "inst18" (rect 8 175 41 188)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -776,28 +812,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(drawing
 		(rectangle (rect 16 16 112 176))
-	)
-)
-(symbol
-	(rect 952 416 1104 496)
-	(text "partial_encoder" (rect 5 0 82 11)(font "Arial" ))
-	(text "inst" (rect 8 64 26 75)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "m[3..1]" (rect 0 0 34 11)(font "Arial" ))
-		(text "m[3..1]" (rect 21 27 55 38)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "z[7..0]" (rect 0 0 30 11)(font "Arial" ))
-		(text "z[7..0]" (rect 106 27 136 38)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 136 64))
 	)
 )
 (connector
@@ -920,10 +934,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 424 272)
 )
 (connector
-	(pt 384 480)
-	(pt 472 480)
-)
-(connector
 	(pt 424 272)
 	(pt 424 312)
 )
@@ -934,10 +944,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 472 304)
 	(pt 504 304)
-)
-(connector
-	(pt 424 312)
-	(pt 504 312)
 )
 (connector
 	(pt 472 320)
@@ -952,10 +958,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 664 112)
 )
 (connector
-	(pt 568 312)
-	(pt 608 312)
-)
-(connector
 	(pt 608 312)
 	(pt 664 312)
 )
@@ -968,20 +970,12 @@ https://fpgasoftware.intel.com/eula.
 	(pt 608 312)
 )
 (connector
-	(pt 384 256)
-	(pt 640 256)
-)
-(connector
 	(pt 640 256)
 	(pt 640 296)
 )
 (connector
 	(pt 640 296)
 	(pt 664 296)
-)
-(connector
-	(pt 384 464)
-	(pt 536 464)
 )
 (connector
 	(pt 536 464)
@@ -1369,14 +1363,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 552 48)
 )
 (connector
-	(pt 384 48)
-	(pt 552 48)
-)
-(connector
-	(pt 384 64)
-	(pt 472 64)
-)
-(connector
 	(pt 816 1072)
 	(pt 848 1072)
 	(bus)
@@ -1387,23 +1373,8 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "m[1]" (rect 824 1034 837 1059)(font "Intel Clear" )(vertical))
-	(pt 848 496)
-	(pt 848 1072)
-)
-(connector
 	(pt 728 496)
 	(pt 848 496)
-)
-(connector
-	(pt 848 496)
-	(pt 904 496)
-)
-(connector
-	(text "m[3..1]" (rect 917 432 953 445)(font "Intel Clear" ))
-	(pt 952 448)
-	(pt 904 448)
-	(bus)
 )
 (connector
 	(pt 728 104)
@@ -1414,31 +1385,12 @@ https://fpgasoftware.intel.com/eula.
 	(pt 904 104)
 )
 (connector
-	(text "m[3]" (rect 888 410 901 435)(font "Intel Clear" )(vertical))
-	(pt 904 104)
-	(pt 904 448)
-)
-(connector
-	(pt 848 304)
-	(pt 848 448)
-)
-(connector
 	(pt 728 304)
 	(pt 784 304)
 )
 (connector
 	(pt 784 304)
 	(pt 848 304)
-)
-(connector
-	(text "m[2]" (rect 856 432 881 445)(font "Intel Clear" ))
-	(pt 904 448)
-	(pt 848 448)
-)
-(connector
-	(text "m[1]" (rect 888 458 901 483)(font "Intel Clear" )(vertical))
-	(pt 904 448)
-	(pt 904 496)
 )
 (connector
 	(pt 1160 448)
@@ -1537,6 +1489,71 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1288 448)
 	(pt 1288 672)
 )
+(connector
+	(text "<<__$DEF_ALIAS160>>" (rect 888 410 901 529)(font "Intel Clear" )(vertical)(invisible))
+	(pt 904 104)
+	(pt 904 448)
+)
+(connector
+	(pt 904 448)
+	(pt 968 448)
+)
+(connector
+	(pt 848 464)
+	(pt 848 304)
+)
+(connector
+	(pt 848 464)
+	(pt 968 464)
+)
+(connector
+	(pt 848 480)
+	(pt 848 496)
+)
+(connector
+	(text "m[1]" (rect 824 1034 837 1059)(font "Intel Clear" )(vertical))
+	(pt 848 496)
+	(pt 848 1072)
+)
+(connector
+	(pt 848 480)
+	(pt 968 480)
+)
+(connector
+	(text "m1_is_one" (rect 458 32 513 45)(font "Intel Clear" ))
+	(pt 384 48)
+	(pt 552 48)
+)
+(connector
+	(text "m1_is_error" (rect 433 48 495 61)(font "Intel Clear" ))
+	(pt 384 64)
+	(pt 472 64)
+)
+(connector
+	(text "m2_is_one" (rect 417 240 472 253)(font "Intel Clear" ))
+	(pt 384 256)
+	(pt 640 256)
+)
+(connector
+	(text "m2_is_error" (rect 392 272 454 285)(font "Intel Clear" ))
+	(pt 424 312)
+	(pt 504 312)
+)
+(connector
+	(text "m3_is_one" (rect 398 448 453 461)(font "Intel Clear" ))
+	(pt 384 464)
+	(pt 536 464)
+)
+(connector
+	(text "m3_is_error" (rect 407 464 469 477)(font "Intel Clear" ))
+	(pt 384 480)
+	(pt 472 480)
+)
+(connector
+	(text "valid" (rect 583 296 607 309)(font "Intel Clear" ))
+	(pt 568 312)
+	(pt 608 312)
+)
 (junction (pt 152 48))
 (junction (pt 152 64))
 (junction (pt 152 80))
@@ -1582,7 +1599,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 848 1072))
 (junction (pt 816 1072))
 (junction (pt 848 496))
-(junction (pt 904 448))
 (junction (pt 1160 448))
 (junction (pt 1224 448))
 (junction (pt 1288 448))
