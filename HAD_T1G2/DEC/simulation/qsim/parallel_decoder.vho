@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "11/13/2022 18:30:09"
+-- DATE "11/13/2022 20:25:30"
 
 -- 
 -- Device: Altera EP4CGX15BF14C6 Package FBGA169
@@ -78,8 +78,8 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	full_parallel_decoder IS
     PORT (
 	y : IN std_logic_vector(7 DOWNTO 0);
-	valid : OUT std_logic;
-	m : OUT std_logic_vector(3 DOWNTO 0)
+	valid : BUFFER std_logic;
+	m : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END full_parallel_decoder;
 
